@@ -26,9 +26,33 @@ An AI-powered assistant chatbot that is designed to provide users with instant, 
     ```bash
     cd medics-demo
     ```
+
+### Setting up a Python Virtual Environment
+
+1. Create a virtual environment:
+    ```bash
+    python -m venv venv
+    ```
+
+2. Activate the virtual environment:
+
+    - **On Windows**:
+      ```bash
+      venv\Scripts\activate
+      ```
+
+    - **On macOS/Linux**:
+      ```bash
+      source venv/bin/activate
+      ```
+
 3. Install the necessary dependencies:
     ```bash
     pip install -r requirements.txt
     ```
 
+4. Deactivate the environment when done:
+    ```bash
+    deactivate
+    ```
 
