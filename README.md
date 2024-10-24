@@ -27,6 +27,11 @@ An AI-powered assistant chatbot that is designed to provide users with instant, 
     cd medics-demo
     ```
 
+3. Add your Gemini API Key:
+    ```bash
+    GEM_API_KEY=api_key_here
+    ```
+
 ### Setting up a Python Virtual Environment
 
 1. Create a virtual environment:
