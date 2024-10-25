@@ -1,15 +1,3 @@
-(Suggestions)
-
-1. read about system prompting
-2. and make changes to the code cos you're just calling the api
-3. medics so the ai should know its a medical chatbot else if I ask about football it will give me a reply it shouldn't be so
-
-will be expecting the changes before tomorrow
-
-
-
-
-
 # Medics
 An AI-powered assistant chatbot that is designed to provide users with instant, reliable, and accurate information on health and medical topics.
 
@@ -73,3 +61,32 @@ An AI-powered assistant chatbot that is designed to provide users with instant, 
     deactivate
     ```
 
+
+### How to run the application
+
+1. Start the FastAPI by running
+    ```bash
+    uvicorn main:app --reload
+    ```
+
+2. Proceed to the Endpoint
+    - **POST/chatbot**: Interact with the model
+
+        **Request Body:**
+        ```bash
+        {
+            "user_input": "Your question here"
+        }
+        ```
+
+        **Response Body:**
+        ```bash
+        {
+            "response": "Bot's response here"
+        }
+        ```
+
+
+### Notes
+
+- If you encounter any issues, make sure your Gemini API key is correct and that you have set it properly in your environment.
