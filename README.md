@@ -1,3 +1,15 @@
+(Suggestions)
+
+1. read about system prompting
+2. and make changes to the code cos you're just calling the api
+3. medics so the ai should know its a medical chatbot else if I ask about football it will give me a reply it shouldn't be so
+
+will be expecting the changes before tomorrow
+
+
+
+
+
 # Medics
 An AI-powered assistant chatbot that is designed to provide users with instant, reliable, and accurate information on health and medical topics.
 
