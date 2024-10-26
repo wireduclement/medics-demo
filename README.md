@@ -64,27 +64,17 @@ An AI-powered assistant chatbot that is designed to provide users with instant, 
 
 ### How to run the application
 
-1. Start the FastAPI by running
+1. Open Command Prompt or PowerShell and navigate to the directory containing run.bat
     ```bash
-    uvicorn main:app --reload
+    cd path\to\your\project
     ```
 
-2. Proceed to the Endpoint
-    - **POST/chatbot**: Interact with the model
+2. Start the program by running
+    ```bash
+    run.bat
+    ```
 
-        **Request Body:**
-        ```bash
-        {
-            "user_input": "Your question here"
-        }
-        ```
-
-        **Response Body:**
-        ```bash
-        {
-            "response": "Bot's response here"
-        }
-        ```
+3. After redirecting you to the localhost, ask your questions and get a response
 
 
 ### Notes
