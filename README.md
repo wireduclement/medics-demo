@@ -64,7 +64,7 @@ An AI-powered assistant chatbot that is designed to provide users with instant, 
 
 ### How to run the application
 
-1. Open Command Prompt or PowerShell and navigate to the directory containing run.bat
+1. Open Command Prompt and navigate to the directory containing run.bat
     ```bash
     cd path\to\your\project
     ```
