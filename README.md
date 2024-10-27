@@ -64,14 +64,14 @@ An AI-powered assistant chatbot that is designed to provide users with instant, 
 
 ### How to run the application
 
-1. Open Command Prompt and navigate to the directory containing run.bat
+1. Open Command Prompt or Powershell and navigate to the directory containing run.py
     ```bash
     cd path\to\your\project
     ```
 
 2. Start the program by running
     ```bash
-    run.bat
+    python run.py
     ```
 
 3. After redirecting you to the localhost, ask your questions and get a response

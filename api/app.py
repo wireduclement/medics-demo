@@ -6,7 +6,7 @@ api_url = "http://localhost:8000/chatbot"
 
 # Title and input box
 st.title("Medics")
-user_input = st.text_input("I am a medical assistant, ask a medical question:")
+user_input = st.text_input("I am a medical assistant, ask any medical question:")
 
 if st.button("Get response"):
    # Send the user question to FastAPI
