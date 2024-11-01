@@ -5,7 +5,24 @@ import time
 
 api_url = "http://127.0.0.1:8000/chatbot"
 
+
+def display_response(response):
+   response_placeholder = st.empty()
+   full_response = ""
+   for word in response.split():
+      full_response += word + " "
+      response_placeholder.markdown(full_response)
+      time.sleep(0.05)
+
+   response_placeholder.markdown(bot_response, unsafe_allow_html=True)
+
+
 st.title("Medics")
+with st.expander("Disclaimer"):
+   st.write("""
+   **Important:** This chatbot is intended to provide general medical information and answer common health-related questions.
+   It is not a substitute for professional medical advice, diagnosis, or treatment.
+   """)
 
 # Initialize the chat history
 if "messages" not in st.session_state:
@@ -17,7 +34,7 @@ for message in st.session_state.messages:
       st.markdown(message["content"])
 
 # Accept user input
-if prompt := st.chat_input("How can I help you today?"):
+if prompt := st.chat_input("Message Medics"):
    # Add user message to chat history and display it
    st.session_state.messages.append({"role": "user", "content": prompt})
    with st.chat_message("user"):
@@ -29,22 +46,13 @@ if prompt := st.chat_input("How can I help you today?"):
       response_data = response.json()
       bot_response = response_data["response"]
 
-      def stream_response(response_text):
-         for word in response_text.split():
-            yield word + " "
-            time.sleep(0.05)
-
       # Add assistant response to chat history and display it
       st.session_state.messages.append({"role": "assistant", "content": bot_response})
       with st.chat_message("assistant"):
-         response_placeholder = st.empty()
-         full_response = ""
-         for word in bot_response.split():
-            full_response += word + " "
-            response_placeholder.markdown(full_response)
-            time.sleep(0.05)
+         display_response(bot_response)
 
-         response_placeholder.markdown(bot_response, unsafe_allow_html=True)
-
-   except requests.exceptions.RequestException as e:
-      st.error(f"Error: {e}")
+   except requests.exceptions.RequestException:
+      bot_response = "I'm sorry, there was an error generating your response. Please try again."
+      st.session_state.messages.append({"role": "assistant", "content": bot_response})
+      with st.chat_message("assistant"):
+         display_response(bot_response)
