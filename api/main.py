@@ -22,7 +22,7 @@ def chat_response(user_input: str):
 
    # System prompt guiding the response to medical questions only 
    prompt = (
-      "You are a medical expert assistant. Only respond to medical-related questions and politely decline to answer any other type of questions.\n\nUser: "
+      "This is a following conversation with you as a medical expert assistant. Only respond to medical-related questions and politely decline to answer any other type of questions.\n\nUser: "
       f"{user_input}\nAI:"
    )
 
